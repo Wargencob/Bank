@@ -1,0 +1,29 @@
+﻿<Window x:Class="Банкомат.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Банкомат"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="38*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="1" Margin="0,0,0,-10">
+            <TextBlock Text="Card number:" TextAlignment="Center" FontWeight="Bold"/>
+            <TextBox x:Name="CardNumber"  Margin="0,5,0,0" MaxLength="16" PreviewTextInput="PinBox_PreviewTextInput"/>
+            <TextBlock Text="Pin code:" TextAlignment="Center" FontWeight="Bold"/>
+            <TextBox x:Name="PinCode" Margin="0,5,0,0" MaxLength="4" PreviewTextInput="PinBox_PreviewTextInput"/>
+            <Button Content="Enter" x:Name="Enter" HorizontalAlignment="Right" Margin="0,5,0,0" Height="22" Width="124" Click="Enter_Click"/>
+            <TextBlock Text="Balance:" TextAlignment="Center" FontWeight="Bold" Margin="0,5,0,0"/>
+            <TextBox IsEnabled="False" x:Name="Balance" Margin="0,5,0,0"/>
+            <Button Margin="0,5,0,0" x:Name="Insert" IsEnabled="False" Content="Insert" Grid.Column="1" Click="insert_click" Width="83"/>
+            <Button Margin="0,5,0,0" x:Name="Take_off" IsEnabled="False" Content="Take off" Grid.Column="1" Click="take_off_click" Width="83"/>
+            <TextBlock Text="Введите сумму" Margin="0,5,0,0" TextAlignment="Center" FontWeight="Bold"/>
+            <TextBox IsEnabled="False" x:Name="Summ" Margin="0,5,0,0" PreviewTextInput="PinBox_PreviewTextInput"/>
+        </StackPanel>
+    </Grid>
+</Window>
